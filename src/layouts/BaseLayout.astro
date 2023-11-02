@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+
+const { title, description } = Astro.props;
+
+const defaultTitle = 'Alper Unal';
+const defaultDescription = 'Personal webpage of Alper Unal';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title || defaultTitle}
+      description={description || defaultDescription}
+    />
+  </head>
+  <body class="flex flex-col min-h-screen bg-[#1C1C1E] select-none">
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

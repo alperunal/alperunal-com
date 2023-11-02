@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alperunal.com/sitemap-index.xml

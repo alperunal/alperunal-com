@@ -1,0 +1,33 @@
+---
+interface SocialAccount {
+  name: string;
+  url: string;
+}
+
+const socials: SocialAccount[] = [
+  {
+    name: 'Github',
+    url: 'https://www.github.com/alperunal/',
+  },
+  {
+    name: 'Linkedin',
+    url: 'https://www.linkedin.com/in/mehmet-alper-unal/',
+  },
+];
+---
+
+<section>
+  <div
+    class="flex grid-cols-3 gap-2 md:gap-3 justify-center pt-10 lg:pt-16 font-bold"
+  >
+    {
+      socials.map((account: SocialAccount) => (
+        <div class="bg-[#5865F2] rounded-lg text-white py-1 md:py-2 px-2 md:px-6 text-md md:text-xl cursor-pointer">
+          <a href={account.url} target="_blank" rel="noopener">
+            {account.name}
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>
